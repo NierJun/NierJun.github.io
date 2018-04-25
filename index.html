@@ -82,15 +82,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>title: UIProgressView</p>
-<hr>
+<h2 id="UIProgressView"><a href="#UIProgressView" class="headerlink" title="UIProgressView"></a>UIProgressView</h2><hr>
 <p>UIProgressView，也就是UIKit提供的进度条，我们经常会在下载的时候看到这个控件:<br><img src="/images/UIProgressView/uiprogressview.png" alt="uiprogressview"></p>
 <p>下面就简单介绍UIProgressView的使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">//  ViewController.m</span><br><span class="line">//  iOS_UIProgressView</span><br><span class="line">//</span><br><span class="line">//  Created by 汪俊 on 2018/4/25.</span><br><span class="line">//  Copyright © 2018年 WangJun. All rights reserved.</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line"></span><br><span class="line">@interface ViewController ()</span><br><span class="line">@property (nonatomic, strong)UIProgressView *progress;</span><br><span class="line">@property (nonatomic, strong)NSTimer *myTimer;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation ViewController</span><br><span class="line"></span><br><span class="line">-(UIProgressView *)progress &#123;</span><br><span class="line">    if (!_progress) &#123;</span><br><span class="line">        </span><br><span class="line">        //进度条高度不可修改</span><br><span class="line">        _progress = [[UIProgressView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];</span><br><span class="line">        </span><br><span class="line">        //设置进度条的颜色</span><br><span class="line">        _progress.progressTintColor = [UIColor blueColor];</span><br><span class="line">        </span><br><span class="line">        //未完成部分的颜色</span><br><span class="line">        _progress.trackTintColor = [UIColor redColor];</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        //设置进度条的当前值，范围：0~1；</span><br><span class="line">        _progress.progress = 0.0;</span><br><span class="line">        </span><br><span class="line">        /*</span><br><span class="line">         typedef NS_ENUM(NSInteger, UIProgressViewStyle) &#123;</span><br><span class="line">         UIProgressViewStyleDefault,     // normal progress bar</span><br><span class="line">         UIProgressViewStyleBar __TVOS_PROHIBITED,     // for use in a toolbar</span><br><span class="line">         &#125;;</span><br><span class="line">         */</span><br><span class="line">        _progress.progressViewStyle = UIProgressViewStyleBar;</span><br><span class="line">    &#125;</span><br><span class="line">    return _progress;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    self.view.backgroundColor = [UIColor grayColor];</span><br><span class="line">    [self.view addSubview:self.progress];</span><br><span class="line">    </span><br><span class="line">    _myTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerFired:) userInfo:nil repeats:true];</span><br><span class="line">    [[NSRunLoop currentRunLoop]addTimer:_myTimer forMode:NSDefaultRunLoopMode];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(void)timerFired:(id)sender &#123;</span><br><span class="line">    _progress.progress += 0.1;</span><br><span class="line">    if (_progress.progress == 1.0) &#123;</span><br><span class="line">        [_myTimer invalidate];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/UIProgressView/" data-id="cjgetey6l0000o20ktmvdppyb" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/04/25/UIProgressView/" data-id="cjgetq4dh0000rc0kop39cnvu" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -155,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/15/my-first-text/" data-id="cjgetey6q0001o20kz8cn5hhn" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/15/my-first-text/" data-id="cjgetq4dq0002rc0kegxsta0g" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -200,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/15/hello-world/" data-id="cjgetey6s0002o20kyt73t7et" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/15/hello-world/" data-id="cjgetq4dn0001rc0k7n0opkww" class="article-share-link">Teilen</a>
       
       
     </footer>
