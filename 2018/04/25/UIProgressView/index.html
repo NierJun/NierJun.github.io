@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Nier`s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="UIProgressView UIProgressView，也就是UIKit提供的进度条，我们经常会在下载的时候看到这个控件: 下面就简单介绍UIProgressView的使用方法：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nier`s Blog">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/UIProgressView/index.html">
+<meta property="og:site_name" content="Nier`s Blog">
+<meta property="og:description" content="UIProgressView UIProgressView，也就是UIKit提供的进度条，我们经常会在下载的时候看到这个控件: 下面就简单介绍UIProgressView的使用方法：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585">
+<meta property="og:locale" content="Chinese">
+<meta property="og:image" content="http://yoursite.com/images/UIProgressView/uiprogressview.png">
+<meta property="og:updated_time" content="2018-04-25T08:14:34.691Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nier`s Blog">
+<meta name="twitter:description" content="UIProgressView UIProgressView，也就是UIKit提供的进度条，我们经常会在下载的时候看到这个控件: 下面就简单介绍UIProgressView的使用方法：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585">
+<meta name="twitter:image" content="http://yoursite.com/images/UIProgressView/uiprogressview.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Nier`s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Nier`s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Experience comes from the wrong judgment.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-UIProgressView" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/25/UIProgressView/" class="article-date">
+  <time datetime="2018-04-25T08:05:39.980Z" itemprop="datePublished">2018-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="UIProgressView"><a href="#UIProgressView" class="headerlink" title="UIProgressView"></a>UIProgressView</h2><hr>
+<p>UIProgressView，也就是UIKit提供的进度条，我们经常会在下载的时候看到这个控件:<br><img src="/images/UIProgressView/uiprogressview.png" alt="uiprogressview"></p>
+<p>下面就简单介绍UIProgressView的使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">//  ViewController.m</span><br><span class="line">//  iOS_UIProgressView</span><br><span class="line">//</span><br><span class="line">//  Created by 汪俊 on 2018/4/25.</span><br><span class="line">//  Copyright © 2018年 WangJun. All rights reserved.</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line"></span><br><span class="line">@interface ViewController ()</span><br><span class="line">@property (nonatomic, strong)UIProgressView *progress;</span><br><span class="line">@property (nonatomic, strong)NSTimer *myTimer;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation ViewController</span><br><span class="line"></span><br><span class="line">-(UIProgressView *)progress &#123;</span><br><span class="line">    if (!_progress) &#123;</span><br><span class="line">        </span><br><span class="line">        //进度条高度不可修改</span><br><span class="line">        _progress = [[UIProgressView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];</span><br><span class="line">        </span><br><span class="line">        //设置进度条的颜色</span><br><span class="line">        _progress.progressTintColor = [UIColor blueColor];</span><br><span class="line">        </span><br><span class="line">        //未完成部分的颜色</span><br><span class="line">        _progress.trackTintColor = [UIColor redColor];</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        //设置进度条的当前值，范围：0~1；</span><br><span class="line">        _progress.progress = 0.0;</span><br><span class="line">        </span><br><span class="line">        /*</span><br><span class="line">         typedef NS_ENUM(NSInteger, UIProgressViewStyle) &#123;</span><br><span class="line">         UIProgressViewStyleDefault,     // normal progress bar</span><br><span class="line">         UIProgressViewStyleBar __TVOS_PROHIBITED,     // for use in a toolbar</span><br><span class="line">         &#125;;</span><br><span class="line">         */</span><br><span class="line">        _progress.progressViewStyle = UIProgressViewStyleBar;</span><br><span class="line">    &#125;</span><br><span class="line">    return _progress;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    self.view.backgroundColor = [UIColor grayColor];</span><br><span class="line">    [self.view addSubview:self.progress];</span><br><span class="line">    </span><br><span class="line">    _myTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerFired:) userInfo:nil repeats:true];</span><br><span class="line">    [[NSRunLoop currentRunLoop]addTimer:_myTimer forMode:NSDefaultRunLoopMode];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(void)timerFired:(id)sender &#123;</span><br><span class="line">    _progress.progress += 0.1;</span><br><span class="line">    if (_progress.progress == 1.0) &#123;</span><br><span class="line">        [_myTimer invalidate];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/25/UIProgressView/" data-id="cjh7bcpbv00006u0kfwp9hkpx" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/15/my-first-text/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">my first text</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/25/UIProgressView/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/15/my-first-text/">my first text</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/15/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Jun Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
